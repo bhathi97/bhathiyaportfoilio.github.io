@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio Website - Bhathiya Bandara</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/006814c4b6.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<div id="header">
+    <div class="container">
+        <nav>
+            <ul id="sideMenu">
+                <li><a href="#header">Home</a></li>
+                <li><a href="#about">About Me</a></li>
+                <li><a href="#services">Interests</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact Me</a></li>  
+                <i class="fa-solid fa-xmark" onclick="closeMenu()"></i>
+                 
+            </ul>
+            <i class="fa-solid fa-bars" onclick="openMenu()"></i>
+        </nav>
+        <div class="header-text">
+            <h3>Hi...!</h3>
+            <h2 id="greetingText"></h2>
+            <div class="test1">
+                <p>Here,</p>
+                <h1>Bhathiya Bandara</h1>
+                <p>I wanna make people feel okay.&#x1F60E;</p>
+                
+            </div>
+        </div>
+    </div>
+</div>
+<!-----------------------------about-------------------------------------------------->
+<div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="images/about.jpg" alt="">
+            </div>
+            <div class="about-col-2">
+                <h1 class="sub-title">About Me</h1>
+                <br>
+                <p class="sub-intro">
+                    &#x1F44B;
+                    My name is Bhathiya Akalanka Ranaweera Bandara. You can call me Bhathiya. 
+                    I'm from Kandy and I'm 26 years old.
+                     I have recently completed my undergraduate studies and currently,
+                     I am looking for a professional environment  where I can advance in my career and gain knowledge.
+                      </p>
+               
+                <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                    <p class="tab-links" onclick="opentab('exper')">Work Experience</p>
+                    <p class="tab-links" onclick="opentab('edu')">Education</p>
+                    <p class="tab-links" onclick="opentab('achive')">Achievements</p>
+                </div>
+
+                <div class="tab-contents active-tab" id="skills">
+                    <ul>
+                        <li><span>C#</span><br> Experienced in designing and developing .NET applications using Windows Forms and Web applications (ASP.NET). Skilled in leveraging C# to create robust and scalable software solutions.</li>
+                        <li><span>VB</span><br>  Experienced in designing and developing .NET applications using Windows Forms and Windows Presentation Foundation (WPF). Proficient in utilizing Visual Basic to build user-friendly and feature-rich software applications.</li>
+                        <li><span>MsSQL</span><br> Experienced in designing and developing databases for applications using Microsoft SQL Server. Skilled in creating efficient and well-structured database schemas to support application data storage and retrieval.</li>
+                        <li><span>OOP</span><br> Strong understanding and application of Object-Oriented Programming (OOP) principles. Proficient in developing software solutions that are modular, extensible, and maintainable, ensuring long-term usability and scalability.</li>
+                        <li><span>HTML, CSS, JavaScript, Java, T-SQL, Excel, C, Arduino</span></li>
+                       
+                    </ul>
+                </div>
+
+                <div class="tab-contents" id="exper">
+                    <ul>
+                        <li><span>Software Developer Trainee (December 2022 - June 2023)</span>
+                            <br>
+                            <em>@IT Function, Ceylon Petroleum Corporation Head Office, Colombo, Sri Lanka.</em>
+                            <ul class="bullet">
+                                <li>Collaborated with team members on projects and assignments.</li>
+                                <li>Gained experience with programming languages such as C# and VB.</li>
+                                <li>Gained experience with database management systems such as MsSQL</li>
+                                <li>Demonstrated strong problem-solving and analytical skills</li>
+                            </ul>
+                        </li>
+                    </ul>  
+                </div>
+
+                <div class="tab-contents" id="edu">
+                    <ul>
+                        <li><span>University of Colombo, Sri Lanka [2018 - 2023]</span><br> Bachelor Of Science (Hons.) Electronics and IT <br> GPA- 3.528 (Secound Upper Class)</li>
+                        <li><span>St. Sylvester's Collage, Kandy, Sri Lanka [2017]</span><br>  GCE A/Ls - Z-score: 1.4160 | Combined Maths: A , Physics: B, Chemistry: C <br>(District Rank : 196)</li>
+                        <li><span>Sri Dheerananda National Collage, Pilimathalawa, Sri Lanka [2013]</span><br> GCE O/Ls - 7As and 2Bs + B | Mathematics, Science, ICT, Commerce, Sinhala, English, Tamil, Buddhism, History, Drawing </li>
+                    </ul>
+                </div>
+
+                <div class="tab-contents" id="achive">
+                    <ul>
+                        <li><span>University Colors for Baseball (2nd runner up Team - Inter University Games 2022)</span><br>University of Colombo, Sri Lanka [2022]</li>
+                        <li><span>Head Organizer of Astronomical Society of University of Colombo</span><br>University of Colombo, Sri Lanka [2021 - 2022]</li>
+                        <li><span>Librarian of Students' Computer Lounge & Library of University of Colombo</span><br>University of Colombo, Sri Lanka [ 2019 - 2022]</li>
+                        <li><span>Vice president of the Psychological Society of St.Sylvester's Collage, Kandy</span><br>St.Sylvester's Collage, Kandy  [2015 - 2016]</li>
+                        <li><span>Seinor Prefect at Sri Dheerananda Collage</span><br>Sri Dheerananda Collage, Pilimathalawa, Kandy, Sri Lanka [2011 - 2013]</li>
+                    </ul>
+                </div>
+
+                
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- ------------------------------services------------------------------------------------- -->
+<div id="services">
+    <div class="container">
+        <h1 class="sub-title">My Interests</h1>
+        <div class="servives-list">
+            <div>
+                <i class="fa-solid fa-laptop-code"></i>
+                <h2>Application Design</h2>
+                <p>These projects involve the design and development of applications using C# .NET or Windows Forms or VB.NET or WPF and Object-Oriented Programming (OOP) principles.</p>
+                <a href="#">Learn more</a>
+            </div>
+            <div>
+                <i class="fa-solid fa-code"></i>
+                <h2>Web Design</h2>
+                <p>These projects focuse on web design and development using ASP.NET or HTML, CSS, JavaScript , or creating Android applications</p>
+                <a href="#">learn more</a>
+            </div>
+            <div>
+                <i class="fa-solid fa-database"></i>
+                <h2>Database Design</h2>
+                <p>These projects involve designing databases using MySQL or MS SQL, T-SQL, implementing normalization principles and creating database diagrams.</p>
+                <a href="#">learn more</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- ---------------------------------projects--------------------------------- -->
+<div id="projects">
+    <div class="container">
+        <h1 class="sub-title">My Projects</h1>
+            <div class="work-list">
+                <div class="work">
+                    <img src="images/pg1.png" alt="">
+                    <div class="layer">
+                        <h3>Crewmen Assigning System</h3>
+                        <p>Designed and implemented an advanced system for managing crew members shift assignments. Generated accurate and easily accessible reports with detailing crew members assignments and shift schedules.
+                            [VB dotnet, Windows Forms, MsSQL]
+
+                        </p>
+                        <a href="#">
+                            <i class="fa-solid fa-up-right-from-square"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="images/pg2.png" alt="">
+                    <div class="layer">
+                        <h3>Trainee Salary management System</h3>
+                        <p>Developed a comprehensive salary management software application that efficiently generates pay sheets for trainees to manage the transmission of salary information to banking institutions.
+                            [C# dotnet, WPF, MsSQL]
+
+                        </p>
+                        <a href="#">
+                            <i class="fa-solid fa-up-right-from-square"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="images/pg3.png" alt="">
+                    <div class="layer">
+                        <h3>Personal Blogs | LinedIn </h3>
+                        <p>
+                            I maintain a learning blog where I share my experiences with others. It serves as a platform for me to document and share my daily learning journey with the aim of helping and inspiring others.
+                        </p>
+                        <a href="#">
+                            <i class="fa-solid fa-up-right-from-square"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="work">
+                    <img src="images/pg4.png" alt="">
+                    <div class="layer">
+                        <h3>TT Forms Managing System</h3>
+                        <p>Designed and implemented an advanced system for managing Telegraphic Transfer Forms. Generated accurate PDF document for Sumbit to the Bank.
+                            [C# dotnet, MsSQL]
+
+                        </p>
+                        <a href="#">
+                            <i class="fa-solid fa-up-right-from-square"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="work">
+                    <img src="images/pg5.png" alt="">
+                    <div class="layer">
+                        <h3>Captains Card (Android App)</h3>
+                        <p>Coded a mobile application to Rank players according to the captain's vision and also can use as a
+                            player details mini log. [java, firebase, android studio]
+                            
+                        </p>
+                        <a href="#">
+                            <i class="fa-solid fa-up-right-from-square"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="work">
+                    <img src="images/pg6.png" alt="">
+                    <div class="layer">
+                        <h3>Personal Application Collection</h3>
+                        <p> These are some applications I have created for my usage.
+                            (ex: A word counter for my research writing, a fun dinosaur game, a number converter designed to teach numbers and etc.)
+                            [C# dotnet]
+                        </p>
+                        <a href="#">
+                            <i class="fa-solid fa-up-right-from-square"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="work">
+                    <img src="images/pg8.png" alt="">
+                    <div class="layer">
+                        <h3>8×8×8 LED cube Display</h3>
+                        <p> In this project, 8x8x8 LED cube was selected to build, which has 512 LEDs.The code is written in the C language using AVR studio and it is burned into the ATmega32 microcontroller using USBasp cable and ATmega32 development board.
+                        </p>
+                        <a href="#">
+                            <i class="fa-solid fa-up-right-from-square"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="work">
+                    <img src="images/pg7.png" alt="">
+                    <div class="layer">
+                        <h3>ASP .NET Projects</h3>
+                        <p> Learning MVC, API, SOLID, Migration, LINQ, .NET, MsSQL
+                        </p>
+                        <a href="#">
+                            <i class="fa-solid fa-up-right-from-square"></i>
+                        </a>
+                    </div>
+                </div>
+
+
+            </div>
+            <!-- <a href="#" class="btn">See more</a> -->
+    </div>
+</div>
+
+
+<!-- -------------------------------contact----------------------------- -->
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">Contact Me</h1>
+                <p><i class="fa-solid fa-paper-plane"></i>  bhathiya.rb@gmail.com</p>
+                <p><i class="fa-solid fa-phone"></i> +94 71 059 1575</p>
+                <div class="social-icons">
+                    <a href="https://facebook.com/bhathiya.r.bandara"> <i class="fa-brands fa-facebook"></i></a>
+                    <a href="https://linkedin.com/in/bhathiya-bandara"> <i class="fa-brands fa-linkedin"></i></a>
+                    <a href="https://github.com/bhathi97"><i class="fa-brands fa-github"></i></a>
+                    
+                </div>
+                <a href="images/CV-RB.pdf" download class="btn btn2">Download CV</a>
+
+
+            </div>
+            <div class="contact-right">
+                <form name="submit-to-google-sheet">
+                    <input type="text" name="Name" placeholder="Your Name" required>
+                    <input type="email" name="Email" placeholder="Your email" required>
+                    <textarea name="Messege" rows="5" placeholder="Your Message"></textarea>
+                    <button type="submit" class="btn btn2">Submit</button>
+                </form>
+                <span id="msg"> hello! Tell me How can I help you?</span>
+            </div>
+        </div>
+    </div>
+    <div class="copy">Bhathiya Bandara | 2023 </div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+    //greed
+    function greet() {
+
+      var currentTime = new Date();
+      var hours = currentTime.getHours();
+      var greeting;
+
+      if (hours < 12) {
+        greeting = 'Good morning';
+      } else if (hours < 16) {
+        greeting = 'Good afternoon';
+      } else {
+        greeting = 'Good evening';
+      }
+
+      var greetingText = document.getElementById('greetingText');
+      greetingText.textContent = greeting + '!';
+    }
+
+    greet(); // Automatically call greet() function when the page loads
+
+
+
+    //about section selection
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+
+</script>
+
+
+<script>
+    var sideM = document.getElementById("sideMenu");
+
+    function openMenu(){
+        sideM.style.right = "0";
+    }
+
+    function closeMenu(){
+        sideM.style.right = "-200px";
+    }
+
+</script>
+
+<script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbwpoZjLA2UPZ2vMI9NnQeRI45C_S4kS8k7rf1WXqEslNYxbZA_BkFKN7J-jemckL4YYMg/exec'
+    const form = document.forms['submit-to-google-sheet'];
+
+    const msg = document.getElementById("msg");
+
+    form.addEventListener('submit', e => {
+        e.preventDefault()
+        fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => {
+            msg.innerHTML = "I have received your message. Thank you for reaching out. I will respond to you as soon as possible. Have a great day!"
+            setTimeout(function(){
+                msg.innerHTML = ""
+            }, 10000)
+            form.reset()
+        })
+        .catch(error => {
+            msg.innerHTML = "It seems that an error occurred. If the issue persists, feel free to contact me again. Thank you for your concern."
+            setTimeout(function(){
+                msg.innerHTML = ""
+            }, 5000)
+        })
+    });
+</script>
+    
+</body>
+</html>
