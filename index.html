@@ -1,406 +1,623 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Personal Portfolio Website - Bhathiya Bandara</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="https://kit.fontawesome.com/006814c4b6.js" crossorigin="anonymous"></script>
+    <title>Bhathiya Bandara | Full Stack Developer</title>
+    <meta name="description" content="Professional portfolio of Bhathiya Bandara, Full Stack Developer specializing in .NET, C#, and web technologies">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
-<div id="header">
-    <div class="container">
-        <nav>
-            <ul id="sideMenu">
-                <li><a href="#header">Home</a></li>
-                <li><a href="#about">About Me</a></li>
-                <li><a href="#services">Interests</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact Me</a></li>  
-                <i class="fa-solid fa-xmark" onclick="closeMenu()"></i>
-                 
-            </ul>
-            <i class="fa-solid fa-bars" onclick="openMenu()"></i>
-        </nav>
-        <div class="header-text">
-            <h3>Hi...!</h3>
-            <h2 id="greetingText"></h2>
-            <div class="test1">
-                <p>Here,</p>
-                <h1>Bhathiya Bandara</h1>
-                <p>I wanna make people feel okay.&#x1F60E;</p>
-                
+    <!-- Theme Toggle -->
+    <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark/light mode">
+        <i class="fas fa-moon"></i>
+        <i class="fas fa-sun"></i>
+    </button>
+
+    <!-- Navigation -->
+    <header class="header" id="header">
+        <div class="container">
+            <nav class="nav">
+                <a href="#" class="logo">Bhathiya<span>.</span></a>
+                <ul class="nav-menu" id="nav-menu">
+                    <li><a href="#home" class="nav-link active">Home</a></li>
+                    <li><a href="#about" class="nav-link">About</a></li>
+                    <li><a href="#skills" class="nav-link">Skills</a></li>
+                    <li><a href="#projects" class="nav-link">Projects</a></li>
+                    <li><a href="#contact" class="nav-link">Contact</a></li>
+                    <li>
+                        <a href="images/CV-RB.pdf" download class="btn btn-primary">
+                            <i class="fas fa-download"></i> Resume
+                        </a>
+                    </li>
+                </ul>
+                <div class="hamburger" id="hamburger">
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container">
+            <div class="hero-content">
+                <h3 class="greeting" id="greeting-text">Good morning!</h3>
+                <h1 class="hero-title">Bhathiya Bandara</h1>
+                <h2 class="hero-subtitle">Full Stack Developer</h2>
+                <p class="hero-text">I build solutions that make people's lives easier and more enjoyable.</p>
+                <div class="hero-cta">
+                    <a href="#projects" class="btn btn-primary">View My Work</a>
+                    <a href="#contact" class="btn btn-secondary">Contact Me</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="image-wrapper">
+                    <img src="images/hero-img.jpg" alt="Bhathiya Bandara" loading="lazy">
+                </div>
             </div>
         </div>
-    </div>
-</div>
-<!-----------------------------about-------------------------------------------------->
-<div id="about">
-    <div class="container">
-        <div class="row">
-            <div class="about-col-1">
-                <img src="images/about.jpg" alt="">
+    </section>
+
+    <!-- About Section -->
+    <section class="section about" id="about">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">About Me</h2>
+                <div class="section-divider"></div>
+                <p class="section-subtitle">Get to know me better</p>
             </div>
-            <div class="about-col-2">
-                <h1 class="sub-title">About Me</h1>
-                <br>
-                <p class="sub-intro">
-                    &#x1F44B;
-                    My name is Bhathiya Akalanka Ranaweera Bandara. You can call me Bhathiya. 
-                    I'm from Kandy and I'm 26 years old.
-                     I have recently completed my undergraduate studies and currently,
-                     I am looking for a professional environment  where I can advance in my career and gain knowledge.
-                      </p>
-               
-                <div class="tab-titles">
-                    <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
-                    <p class="tab-links" onclick="opentab('exper')">Work Experience</p>
-                    <p class="tab-links" onclick="opentab('edu')">Education</p>
-                    <p class="tab-links" onclick="opentab('achive')">Achievements</p>
+            
+            <div class="about-content">
+                <div class="about-image">
+                    <img src="images/about.jpg" alt="About Bhathiya" loading="lazy">
                 </div>
-
-                <div class="tab-contents active-tab" id="skills">
-                    <ul>
-                        <li><span>C#</span><br> Experienced in designing and developing .NET applications using Windows Forms and Web applications (ASP.NET). Skilled in leveraging C# to create robust and scalable software solutions.</li>
-                        <li><span>VB</span><br>  Experienced in designing and developing .NET applications using Windows Forms and Windows Presentation Foundation (WPF). Proficient in utilizing Visual Basic to build user-friendly and feature-rich software applications.</li>
-                        <li><span>MsSQL</span><br> Experienced in designing and developing databases for applications using Microsoft SQL Server. Skilled in creating efficient and well-structured database schemas to support application data storage and retrieval.</li>
-                        <li><span>OOP</span><br> Strong understanding and application of Object-Oriented Programming (OOP) principles. Proficient in developing software solutions that are modular, extensible, and maintainable, ensuring long-term usability and scalability.</li>
-                        <li><span>HTML, CSS, JavaScript, Java, T-SQL, Excel, C, Arduino</span></li>
-                       
-                    </ul>
+                <div class="about-text">
+                    <h3>Who am I?</h3>
+                    <p>My name is Bhathiya Akalanka Ranaweera Bandara. You can call me Bhathiya. I'm from Kandy, Sri Lanka and I'm 26 years old. I have recently completed my undergraduate studies and currently, I am looking for a professional environment where I can advance in my career and gain knowledge.</p>
+                    
+                    <div class="about-info">
+                        <div class="info-item">
+                            <h4>Name:</h4>
+                            <p>Bhathiya Bandara</p>
+                        </div>
+                        <div class="info-item">
+                            <h4>Email:</h4>
+                            <p>bhathiya.rb@gmail.com</p>
+                        </div>
+                        <div class="info-item">
+                            <h4>From:</h4>
+                            <p>Kandy, Sri Lanka</p>
+                        </div>
+                        <div class="info-item">
+                            <h4>Experience:</h4>
+                            <p>1+ Years</p>
+                        </div>
+                    </div>
+                    
+                    <div class="social-links">
+                        <a href="https://linkedin.com/in/bhathiya-bandara" target="_blank" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="https://github.com/bhathi97" target="_blank" aria-label="GitHub">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://facebook.com/bhathiya.r.bandara" target="_blank" aria-label="Facebook">
+                            <i class="fab fa-facebook"></i>
+                        </a>
+                    </div>
                 </div>
+            </div>
+        </div>
+    </section>
 
-                <div class="tab-contents" id="exper">
-                    <ul>
-                        <li><span>Associate Software Engineer (July 2023 - Present)</span>
-                            <br>
-                            <em>@PayMedia pvt Limited , Colombo, Sri Lanka.</em>
-                            <ul class="bullet">
-                                <li>Experienced in industry level software development processes and version controlling using GIT.</li>
-                                <li>Experienced in developing Windows Presentation Foundation (WPF) applications using C# and .NET framework. </li>
-                                <li>Experienced in developing php backend using laraval framework and ASP.NET Core backend deveopments</li>
+    <!-- Skills Section -->
+    <section class="section skills" id="skills">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">My Skills</h2>
+                <div class="section-divider"></div>
+                <p class="section-subtitle">Technologies I work with</p>
+            </div>
+            
+            <div class="skills-container">
+                <div class="skills-category">
+                    <h3 class="skills-category-title">Frontend</h3>
+                    <div class="skills-list">
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <i class="fab fa-html5"></i>
+                            </div>
+                            <div class="skill-info">
+                                <h4>HTML5</h4>
+                                <div class="skill-progress">
+                                    <div class="progress-bar" data-level="90"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <i class="fab fa-css3-alt"></i>
+                            </div>
+                            <div class="skill-info">
+                                <h4>CSS3</h4>
+                                <div class="skill-progress">
+                                    <div class="progress-bar" data-level="85"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <i class="fab fa-js"></i>
+                            </div>
+                            <div class="skill-info">
+                                <h4>JavaScript</h4>
+                                <div class="skill-progress">
+                                    <div class="progress-bar" data-level="75"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="skills-category">
+                    <h3 class="skills-category-title">Backend</h3>
+                    <div class="skills-list">
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <i class="fas fa-code"></i>
+                            </div>
+                            <div class="skill-info">
+                                <h4>C#</h4>
+                                <div class="skill-progress">
+                                    <div class="progress-bar" data-level="85"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <i class="fas fa-database"></i>
+                            </div>
+                            <div class="skill-info">
+                                <h4>MS SQL</h4>
+                                <div class="skill-progress">
+                                    <div class="progress-bar" data-level="80"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <i class="fab fa-laravel"></i>
+                            </div>
+                            <div class="skill-info">
+                                <h4>Laravel</h4>
+                                <div class="skill-progress">
+                                    <div class="progress-bar" data-level="70"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="skills-category">
+                    <h3 class="skills-category-title">Frameworks</h3>
+                    <div class="skills-list">
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <i class="fab fa-microsoft"></i>
+                            </div>
+                            <div class="skill-info">
+                                <h4>.NET</h4>
+                                <div class="skill-progress">
+                                    <div class="progress-bar" data-level="80"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <i class="fab fa-windows"></i>
+                            </div>
+                            <div class="skill-info">
+                                <h4>WPF</h4>
+                                <div class="skill-progress">
+                                    <div class="progress-bar" data-level="75"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <i class="fas fa-window-maximize"></i>
+                            </div>
+                            <div class="skill-info">
+                                <h4>WinForms</h4>
+                                <div class="skill-progress">
+                                    <div class="progress-bar" data-level="85"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience & Education Section -->
+    <section class="section timeline" id="experience">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">My Journey</h2>
+                <div class="section-divider"></div>
+                <p class="section-subtitle">Professional and academic path</p>
+            </div>
+            
+            <div class="timeline-container">
+                <div class="timeline-tabs">
+                    <button class="timeline-tab active" data-tab="experience">Experience</button>
+                    <button class="timeline-tab" data-tab="education">Education</button>
+                    <button class="timeline-tab" data-tab="achievements">Achievements</button>
+                </div>
+                
+                <div class="timeline-content active" id="experience-content">
+                    <div class="timeline-item">
+                        <div class="timeline-date">July 2023 - Present</div>
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-card">
+                            <h3>Associate Software Engineer</h3>
+                            <h4>PayMedia Pvt Limited, Colombo, Sri Lanka</h4>
+                            <ul>
+                                <li>Experienced in industry level software development processes and version controlling using GIT</li>
+                                <li>Developed Windows Presentation Foundation (WPF) applications using C# and .NET framework</li>
+                                <li>Worked on PHP backend using Laravel framework and ASP.NET Core backend developments</li>
                             </ul>
-                        </li>
-
-
-                        <li><span>Software Developer Trainee (December 2022 - June 2023)</span>
-                            <br>
-                            <em>@IT Function, Ceylon Petroleum Corporation Head Office, Colombo, Sri Lanka.</em>
-                            <ul class="bullet">
-                                <li>Collaborated with team members on projects and assignments.</li>
-                                <li>Gained experience with programming languages such as C# and VB.</li>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-date">Dec 2022 - June 2023</div>
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-card">
+                            <h3>Software Developer Trainee</h3>
+                            <h4>IT Function, Ceylon Petroleum Corporation</h4>
+                            <ul>
+                                <li>Collaborated with team members on projects and assignments</li>
+                                <li>Gained experience with programming languages such as C# and VB</li>
                                 <li>Gained experience with database management systems such as MsSQL</li>
                                 <li>Demonstrated strong problem-solving and analytical skills</li>
                             </ul>
-                        </li>
-
-                    </ul>  
+                        </div>
+                    </div>
                 </div>
-
-                <div class="tab-contents" id="edu">
-                    <ul>
-                        <li><span>University of Colombo, Sri Lanka [2018 - 2023]</span><br> Bachelor Of Science (Hons.) Electronics and IT <br> GPA- 3.528 (Secound Upper Class)</li>
-                        <li><span>St. Sylvester's Collage, Kandy, Sri Lanka [2017]</span><br>  GCE A/Ls - Z-score: 1.4160 | Combined Maths: A , Physics: B, Chemistry: C <br>(District Rank : 196)</li>
-                        <li><span>Sri Dheerananda National Collage, Pilimathalawa, Sri Lanka [2013]</span><br> GCE O/Ls - 7As and 2Bs + B | Mathematics, Science, ICT, Commerce, Sinhala, English, Tamil, Buddhism, History, Drawing </li>
-                    </ul>
-                </div>
-
-                <div class="tab-contents" id="achive">
-                    <ul>
-                        <li><span>University Colors for Baseball (2nd runner up Team - Inter University Games 2022)</span><br>University of Colombo, Sri Lanka [2022]</li>
-                        <li><span>Head Organizer of Astronomical Society of University of Colombo</span><br>University of Colombo, Sri Lanka [2021 - 2022]</li>
-                        <li><span>Librarian of Students' Computer Lounge & Library of University of Colombo</span><br>University of Colombo, Sri Lanka [ 2019 - 2022]</li>
-                        <li><span>Vice president of the Psychological Society of St.Sylvester's Collage, Kandy</span><br>St.Sylvester's Collage, Kandy  [2015 - 2016]</li>
-                        <li><span>Senior Prefect at Sri Dheerananda Collage</span><br>Sri Dheerananda Collage, Pilimathalawa, Kandy, Sri Lanka [2011 - 2013]</li>
-                    </ul>
-                </div>
-
                 
-            </div>
-        </div>
-    </div>
-</div>
-
-<!-- ------------------------------services------------------------------------------------- -->
-<div id="services">
-    <div class="container">
-        <h1 class="sub-title">My Interests</h1>
-        <div class="servives-list">
-            <div>
-                <i class="fa-solid fa-laptop-code"></i>
-                <h2>Application Design</h2>
-                <p>These projects involve the design and development of applications using C# .NET or Windows Forms or VB.NET or WPF and Object-Oriented Programming (OOP) principles.</p>
-                <a href="#">Learn more</a>
-            </div>
-            <div>
-                <i class="fa-solid fa-code"></i>
-                <h2>Web Design</h2>
-                <p>These projects focuse on web design and development using ASP.NET or HTML, CSS, JavaScript , or creating Android applications</p>
-                <a href="#">learn more</a>
-            </div>
-            <div>
-                <i class="fa-solid fa-database"></i>
-                <h2>Database Design</h2>
-                <p>These projects involve designing databases using MySQL or MS SQL, T-SQL, implementing normalization principles and creating database diagrams.</p>
-                <a href="#">learn more</a>
-            </div>
-        </div>
-    </div>
-</div>
-
-<!-- ---------------------------------projects--------------------------------- -->
-<div id="projects">
-    <div class="container">
-        <h1 class="sub-title">My Projects</h1>
-            <div class="work-list">
-                <div class="work">
-                    <img src="images/pg1.png" alt="">
-                    <div class="layer">
-                        <h3>Crewmen Assigning System</h3>
-                        <p>Designed and implemented an advanced system for managing crew members shift assignments. Generated accurate and easily accessible reports with detailing crew members assignments and shift schedules.
-                            [VB dotnet, Windows Forms, MsSQL]
-
-                        </p>
-                        <a href="#">
-                            <i class="fa-solid fa-laptop-file"></i>
-                        </a>
+                <div class="timeline-content" id="education-content">
+                    <div class="timeline-item">
+                        <div class="timeline-date">2018 - 2023</div>
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-card">
+                            <h3>Bachelor of Science (Hons.) Electronics and IT</h3>
+                            <h4>University of Colombo, Sri Lanka</h4>
+                            <p>GPA: 3.528 (Second Upper Class)</p>
+                        </div>
                     </div>
-                </div>
-                <div class="work">
-                    <img src="images/pg2.png" alt="">
-                    <div class="layer">
-                        <h3>Trainee Salary management System</h3>
-                        <p>Developed a comprehensive salary management software application that efficiently generates pay sheets for trainees to manage the transmission of salary information to banking institutions.
-                            [C# dotnet, WPF, MsSQL]
-
-                        </p>
-                        <a href="#">
-                            <i class="fa-solid fa-laptop-file"></i>
-                        </a>
-                    </div>
-                </div>
-                <div class="work">
-                    <img src="images/pg3.png" alt="">
-                    <div class="layer">
-                        <h3>Personal Blogs | LinkedIn </h3>
-                        <p>
-                            I maintain a learning blog where I share my experiences with others. It serves as a platform for me to document and share my daily learning journey with the aim of helping and inspiring others.
-                        </p>
-                        <a href="https://linkedin.com/in/bhathiya-bandara">
-                            <i class="fa-solid fa-up-right-from-square"></i>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="work">
-                    <img src="images/pg4.png" alt="">
-                    <div class="layer">
-                        <h3>TT Forms Managing System</h3>
-                        <p>Designed and implemented an advanced system for managing Telegraphic Transfer Forms. Generated accurate PDF document for Sumbit to the Bank.
-                            [C# dotnet, MsSQL]
-
-                        </p>
-                        <a href="#">
-                            <i class="fa-solid fa-laptop-file"></i>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="work">
-                    <img src="images/pg5.png" alt="">
-                    <div class="layer">
-                        <h3>Captains Card (Android App)</h3>
-                        <p>Coded a mobile application to Rank players according to the captain's vision and also can use as a
-                            player details mini log. [java, firebase, android studio]
-                            
-                        </p>
-                        <a href="https://github.com/bhathi97/CaptainsCard">
-                            <i class="fa-solid fa-up-right-from-square"></i>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="work">
-                    <img src="images/pg6.png" alt="">
-                    <div class="layer">
-                        <h3>Personal Application Collection</h3>
-                        <p> These are some applications I have created for my usage.
-                            (ex: A word counter for my research writing, a fun dinosaur game, a number converter designed to teach numbers and etc.)
-                            [C# dotnet]
-                        </p>
-                        <a href="https://github.com/bhathi97">
-                            <i class="fa-solid fa-up-right-from-square"></i>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="work">
-                    <img src="images/pg8.png" alt="">
-                    <div class="layer">
-                        <h3>8×8×8 LED cube Display</h3>
-                        <p> In this project, 8x8x8 LED cube was selected to build, which has 512 LEDs.The code is written in the C language using AVR studio and it is burned into the ATmega32 microcontroller using USBasp cable and ATmega32 development board.
-                        </p>
-                        <a href="https://github.com/bhathi97/LED-cube-Bhathi">
-                            <i class="fa-solid fa-up-right-from-square"></i>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="work">
-                    <img src="images/pg7.png" alt="">
-                    <div class="layer">
-                        <h3>ASP .NET Projects</h3>
-                        <p> Learning MVC, API, SOLID, Migration, LINQ, .NET, MsSQL
-                        </p>
-                        <a href="#">
-                            <i class="fa-solid fa-graduation-cap"></i>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="work">
-                    <img src="images/pg9.png" alt="">
-                    <div class="layer">
-                        <h3>Windows Forms with firebase</h3>
-                        <p> Learning Realtime Database CRUD with .NET
-                        </p>
-                        <a href="https://github.com/bhathi97/Windows-Forms-With-FireBase-CRUD">
-                            <i class="fa-solid fa-graduation-cap"></i>
-                        </a>
-                    </div>
-                </div>
-
-
-            </div>
-            <!-- <a href="#" class="btn">See more</a> -->
-    </div>
-</div>
-
-
-<!-- -------------------------------contact----------------------------- -->
-<div id="contact">
-    <div class="container">
-        <div class="row">
-            <div class="contact-left">
-                <h1 class="sub-title">Contact Me</h1>
-                <p><i class="fa-solid fa-paper-plane"></i>  bhathiya.rb@gmail.com</p>
-                <p><i class="fa-solid fa-phone"></i> +94 71 059 1575</p>
-                <div class="social-icons">
-                    <a href="https://facebook.com/bhathiya.r.bandara"> <i class="fa-brands fa-facebook"></i></a>
-                    <a href="https://linkedin.com/in/bhathiya-bandara"> <i class="fa-brands fa-linkedin"></i></a>
-                    <a href="https://github.com/bhathi97"><i class="fa-brands fa-github"></i></a>
                     
+                    <div class="timeline-item">
+                        <div class="timeline-date">2017</div>
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-card">
+                            <h3>GCE Advanced Level</h3>
+                            <h4>St. Sylvester's College, Kandy</h4>
+                            <p>Z-score: 1.4160 | Combined Maths: A, Physics: B, Chemistry: C</p>
+                            <p>District Rank: 196</p>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-date">2013</div>
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-card">
+                            <h3>GCE Ordinary Level</h3>
+                            <h4>Sri Dheerananda National College, Pilimathalawa</h4>
+                            <p>7As and 2Bs + B | Mathematics, Science, ICT, Commerce, Sinhala, English, Tamil, Buddhism, History, Drawing</p>
+                        </div>
+                    </div>
                 </div>
-                <a href="images/CV-RB.pdf" download class="btn btn2">Download CV</a>
-
-
-            </div>
-            <div class="contact-right">
-                <form name="submit-to-google-sheet">
-                    <input type="text" name="Name" placeholder="Your Name" required>
-                    <input type="email" name="Email" placeholder="Your email" required>
-                    <textarea name="Messege" rows="5" placeholder="Your Message"></textarea>
-                    <button type="submit" class="btn btn2">Submit</button>
-                </form>
-                <span id="msg"> hello! Tell me How can I help you?</span>
+                
+                <div class="timeline-content" id="achievements-content">
+                    <div class="timeline-item">
+                        <div class="timeline-date">2022</div>
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-card">
+                            <h3>University Colors for Baseball</h3>
+                            <p>2nd runner up Team - Inter University Games 2022</p>
+                            <p>University of Colombo, Sri Lanka</p>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-date">2021 - 2022</div>
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-card">
+                            <h3>Head Organizer of Astronomical Society</h3>
+                            <p>University of Colombo, Sri Lanka</p>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-date">2019 - 2022</div>
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-card">
+                            <h3>Librarian of Students' Computer Lounge & Library</h3>
+                            <p>University of Colombo, Sri Lanka</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-    </div>
-    <div class="copy">Bhathiya Bandara | 2023 </div>
+    </section>
 
-</div>
+    <!-- Projects Section -->
+    <section class="section projects" id="projects">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">My Projects</h2>
+                <div class="section-divider"></div>
+                <p class="section-subtitle">Some of my recent work</p>
+            </div>
+            
+            <div class="projects-filter">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="web">Web</button>
+                <button class="filter-btn" data-filter="desktop">Desktop</button>
+                <button class="filter-btn" data-filter="mobile">Mobile</button>
+                <button class="filter-btn" data-filter="other">Other</button>
+            </div>
+            
+            <div class="projects-grid">
+                <!-- Project 1 -->
+                <div class="project-card" data-category="desktop">
+                    <div class="project-image">
+                        <img src="images/pg1.png" alt="Crewmen Assigning System" loading="lazy">
+                    </div>
+                    <div class="project-content">
+                        <h3>Crewmen Assigning System</h3>
+                        <p>Designed and implemented an advanced system for managing crew members shift assignments with detailed reporting.</p>
+                        <div class="project-tech">
+                            <span>VB.NET</span>
+                            <span>WinForms</span>
+                            <span>MsSQL</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="btn btn-small">
+                                <i class="fas fa-laptop-file"></i> Details
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 2 -->
+                <div class="project-card" data-category="desktop">
+                    <div class="project-image">
+                        <img src="images/pg2.png" alt="Trainee Salary Management System" loading="lazy">
+                    </div>
+                    <div class="project-content">
+                        <h3>Trainee Salary Management System</h3>
+                        <p>Developed a comprehensive salary management software application that efficiently generates pay sheets.</p>
+                        <div class="project-tech">
+                            <span>C#</span>
+                            <span>WPF</span>
+                            <span>MsSQL</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="btn btn-small">
+                                <i class="fas fa-laptop-file"></i> Details
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 3 -->
+                <div class="project-card" data-category="web">
+                    <div class="project-image">
+                        <img src="images/pg3.png" alt="Personal Blogs | LinkedIn" loading="lazy">
+                    </div>
+                    <div class="project-content">
+                        <h3>Personal Blogs | LinkedIn</h3>
+                        <p>I maintain a learning blog where I share my experiences with others to help and inspire.</p>
+                        <div class="project-tech">
+                            <span>Content</span>
+                            <span>Writing</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://linkedin.com/in/bhathiya-bandara" target="_blank" class="btn btn-small">
+                                <i class="fas fa-external-link-alt"></i> Visit
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 4 -->
+                <div class="project-card" data-category="desktop">
+                    <div class="project-image">
+                        <img src="images/pg4.png" alt="TT Forms Managing System" loading="lazy">
+                    </div>
+                    <div class="project-content">
+                        <h3>TT Forms Managing System</h3>
+                        <p>Designed and implemented an advanced system for managing Telegraphic Transfer Forms with PDF generation.</p>
+                        <div class="project-tech">
+                            <span>C#</span>
+                            <span>WinForms</span>
+                            <span>MsSQL</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="btn btn-small">
+                                <i class="fas fa-laptop-file"></i> Details
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 5 -->
+                <div class="project-card" data-category="mobile">
+                    <div class="project-image">
+                        <img src="images/pg5.png" alt="Captains Card (Android App)" loading="lazy">
+                    </div>
+                    <div class="project-content">
+                        <h3>Captains Card (Android App)</h3>
+                        <p>Mobile application to rank players according to the captain's vision and player details mini log.</p>
+                        <div class="project-tech">
+                            <span>Java</span>
+                            <span>Firebase</span>
+                            <span>Android</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/bhathi97/CaptainsCard" target="_blank" class="btn btn-small">
+                                <i class="fab fa-github"></i> Code
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 6 -->
+                <div class="project-card" data-category="other">
+                    <div class="project-image">
+                        <img src="images/pg8.png" alt="8×8×8 LED cube Display" loading="lazy">
+                    </div>
+                    <div class="project-content">
+                        <h3>8×8×8 LED cube Display</h3>
+                        <p>Built a 512 LED cube with code written in C using AVR studio and ATmega32 microcontroller.</p>
+                        <div class="project-tech">
+                            <span>C</span>
+                            <span>Electronics</span>
+                            <span>AVR</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/bhathi97/LED-cube-Bhathi" target="_blank" class="btn btn-small">
+                                <i class="fab fa-github"></i> Code
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
+    <!-- Contact Section -->
+    <section class="section contact" id="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Get In Touch</h2>
+                <div class="section-divider"></div>
+                <p class="section-subtitle">I'd love to hear from you</p>
+            </div>
+            
+            <div class="contact-container">
+                <div class="contact-info">
+                    <div class="contact-info-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>Email</h3>
+                            <p>bhathiya.rb@gmail.com</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-info-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>Phone</h3>
+                            <p>+94 71 059 1575</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-info-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>Location</h3>
+                            <p>Kandy, Sri Lanka</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <form class="contact-form" name="submit-to-google-sheet" id="contact-form">
+                    <div class="form-group">
+                        <input type="text" name="Name" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" name="Email" placeholder="Your Email" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" name="Subject" placeholder="Subject">
+                    </div>
+                    <div class="form-group">
+                        <textarea name="Message" rows="5" placeholder="Your Message" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">
+                        <i class="fas fa-paper-plane"></i> Send Message
+                    </button>
+                    <div id="form-message"></div>
+                </form>
+            </div>
+        </div>
+    </section>
 
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-about">
+                    <a href="#" class="footer-logo">Bhathiya<span>.</span></a>
+                    <p>Full Stack Developer passionate about building solutions that make a difference.</p>
+                </div>
+                
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#skills">Skills</a></li>
+                        <li><a href="#projects">Projects</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-social">
+                    <h3>Connect With Me</h3>
+                    <div class="social-icons">
+                        <a href="https://linkedin.com/in/bhathiya-bandara" target="_blank" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="https://github.com/bhathi97" target="_blank" aria-label="GitHub">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://facebook.com/bhathiya.r.bandara" target="_blank" aria-label="Facebook">
+                            <i class="fab fa-facebook"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; <span id="year"></span> Bhathiya Bandara. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
 
+    <!-- Back to Top Button -->
+    <a href="#home" class="back-to-top" id="back-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </a>
 
-
-
-
-
-
-
-
-
-<script>
-    //greed
-    function greet() {
-
-      var currentTime = new Date();
-      var hours = currentTime.getHours();
-      var greeting;
-
-      if (hours < 12) {
-        greeting = 'Good morning';
-      } else if (hours < 16) {
-        greeting = 'Good afternoon';
-      } else {
-        greeting = 'Good evening';
-      }
-
-      var greetingText = document.getElementById('greetingText');
-      greetingText.textContent = greeting + '!';
-    }
-
-    greet(); // Automatically call greet() function when the page loads
-
-
-
-    //about section selection
-    var tablinks = document.getElementsByClassName("tab-links");
-    var tabcontents = document.getElementsByClassName("tab-contents");
-
-    function opentab(tabname){
-        for(tablink of tablinks){
-            tablink.classList.remove("active-link");
-        }
-        for(tabcontent of tabcontents){
-            tabcontent.classList.remove("active-tab");
-        }
-        event.currentTarget.classList.add("active-link");
-        document.getElementById(tabname).classList.add("active-tab");
-    }
-
-</script>
-
-
-<script>
-    var sideM = document.getElementById("sideMenu");
-
-    function openMenu(){
-        sideM.style.right = "0";
-    }
-
-    function closeMenu(){
-        sideM.style.right = "-200px";
-    }
-
-</script>
-
-<script>
-    const scriptURL = 'https://script.google.com/macros/s/AKfycbwpoZjLA2UPZ2vMI9NnQeRI45C_S4kS8k7rf1WXqEslNYxbZA_BkFKN7J-jemckL4YYMg/exec'
-    const form = document.forms['submit-to-google-sheet'];
-
-    const msg = document.getElementById("msg");
-
-    form.addEventListener('submit', e => {
-        e.preventDefault()
-        fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-        .then(response => {
-            msg.innerHTML = "I have received your message. Thank you for reaching out. I will respond to you as soon as possible. Have a great day!"
-            setTimeout(function(){
-                msg.innerHTML = ""
-            }, 10000)
-            form.reset()
-        })
-        .catch(error => {
-            msg.innerHTML = "It seems that an error occurred. If the issue persists, feel free to contact me again. Thank you for your concern."
-            setTimeout(function(){
-                msg.innerHTML = ""
-            }, 5000)
-        })
-    });
-</script>
-    
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
+    <script src="js/main.js"></script>
 </body>
 </html>
