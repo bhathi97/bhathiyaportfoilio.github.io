@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Personal Portfolio Website - Bhathiya Bandara</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/006814c4b6.js" crossorigin="anonymous"></script>
 </head>
 <body>
@@ -399,6 +400,11 @@
                 msg.innerHTML = ""
             }, 5000)
         })
+    });
+
+    document.querySelector('.hamburger').addEventListener('click', function() {
+          this.classList.toggle('active');
+          document.querySelector('.nav-menu').classList.toggle('active');
     });
 </script>
     
